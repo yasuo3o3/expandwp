@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- プラグインアンインストール処理（uninstall.php）
+  - 設定オプション（expandwp_options）の完全削除
+  - パネル幅保存データ（expandwp_width_*）の完全削除
+  - プラグイン関連全オプションのクリーンアップ
+
 ## [0.01] - 2025-01-17
 
 ### Added
@@ -55,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ```
 expandwp/
 ├── expandwp.php                        // メインプラグインファイル
+├── uninstall.php                      // アンインストール処理
 ├── readme.txt                         // WordPress.org用README
 ├── CHANGELOG.md                       // このファイル
 ├── includes/

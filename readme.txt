@@ -1,6 +1,6 @@
 === ExpandWP ===
 Contributors: yasuo3o3
-Tags: gutenberg, editor, panels, resize, productivity
+Tags: gutenberg, editor, panels, resize, productivity, uninstall
 Requires at least: 5.9
 Tested up to: 6.4
 Requires PHP: 7.4
@@ -8,7 +8,7 @@ Stable tag: 0.01
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-広いディスプレイでGutenbergの左右ペイン枠を安全に拡張する最小実装。キーボードショートカット・ドラッグリサイズ対応。
+広いディスプレイでGutenbergの左右ペイン枠を安全に拡張する最小実装。キーボードショートカット・ドラッグリサイズ対応。完全なアンインストール処理付き。
 
 == Description ==
 
@@ -36,6 +36,16 @@ ExpandWPは、広いディスプレイ環境でWordPressのGutenbergエディタ
 * **常時**: 画面読み込み時に即座に拡張
 
 1440px未満のビューポートでは自動・常時モードは抑制され、手動操作のみ有効になります。
+
+= アンインストール =
+
+プラグインをアンインストールすると、以下のデータが完全に削除されます：
+
+* 設定オプション（expandwp_options）
+* パネル幅保存データ（expandwp_width_*）
+* 関連する全ての一時オプション
+
+データベースから完全に削除され、痕跡は残りません。
 
 = キーボードショートカット =
 
@@ -75,6 +85,10 @@ WordPress 5.9以降、PHP 7.4以降が必要です。Gutenbergエディタが有
 = 小さい画面でも使える? =
 
 1440px未満のビューポートでは自動・常時モードは抑制されますが、手動でのトグル操作は可能です。
+
+= プラグインを削除すると設定はどうなる? =
+
+プラグインアンインストール時に設定データとパネル幅データは完全に削除されます。データベースから痕跡も残りません。
 
 == Screenshots ==
 
