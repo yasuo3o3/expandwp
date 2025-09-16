@@ -1,0 +1,159 @@
+/* ExpandWP - Gutenberg パネル拡張スタイル */
+
+/* ドラッグリサイザー */
+.expandwp-resizer {
+    position: absolute !important;
+    top: 0 !important;
+    width: 8px !important;
+    height: 100% !important;
+    cursor: col-resize !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+    background: rgba(0, 123, 255, 0.3) !important;
+    border-radius: 2px !important;
+    pointer-events: auto !important;
+}
+
+.expandwp-resizer:hover {
+    opacity: 0.6 !important;
+}
+
+.expandwp-resizer-left {
+    right: 0 !important;
+}
+
+.expandwp-resizer-right {
+    left: 0 !important;
+}
+
+/* RTL 対応 */
+.rtl .expandwp-resizer-left {
+    left: 0 !important;
+    right: auto !important;
+}
+
+.rtl .expandwp-resizer-right {
+    right: 0 !important;
+    left: auto !important;
+}
+
+/* 拡張されたパネルの横スクロール制御 */
+.expandwp-expanded {
+    overflow-x: hidden !important;
+}
+
+/* 左パネル（List View）特有の調整 */
+.editor-list-view-sidebar.expandwp-expanded,
+.edit-post-editor__list-view-panel.expandwp-expanded {
+    max-width: none !important;
+    flex-shrink: 0 !important;
+}
+
+/* 右パネル（サイドバー）特有の調整 */
+.interface-complementary-area__fill.expandwp-expanded {
+    max-width: none !important;
+    flex-shrink: 0 !important;
+}
+
+/* パネル内のコンテンツエリアの調整 */
+.expandwp-expanded .interface-complementary-area-header,
+.expandwp-expanded .components-panel__header,
+.expandwp-expanded .components-panel__body {
+    width: 100% !important;
+}
+
+/* ドラッグ中のカーソル */
+body.expandwp-dragging {
+    cursor: col-resize !important;
+}
+
+body.expandwp-dragging * {
+    cursor: col-resize !important;
+    user-select: none !important;
+}
+
+/* List View内のアイテムの幅調整 */
+.expandwp-expanded .block-editor-list-view-tree {
+    width: 100% !important;
+}
+
+.expandwp-expanded .block-editor-list-view-block {
+    width: 100% !important;
+}
+
+/* Customizer用の特別調整 */
+.wp-customizer .expandwp-expanded {
+    position: relative !important;
+}
+
+/* 小さい画面での抑制 */
+@media (max-width: 1439px) {
+    .expandwp-resizer {
+        display: none !important;
+    }
+}
+
+/* ハイコントラストモード対応 */
+@media (prefers-contrast: high) {
+    .expandwp-resizer {
+        background: rgba(0, 0, 0, 0.8) !important;
+        border: 1px solid #000 !important;
+    }
+}
+
+/* ダークモード対応（可能な場合） */
+@media (prefers-color-scheme: dark) {
+    .expandwp-resizer {
+        background: rgba(255, 255, 255, 0.3) !important;
+    }
+}
+
+/* アニメーション無効化設定に対応 */
+@media (prefers-reduced-motion: reduce) {
+    .expandwp-resizer {
+        transition: none !important;
+    }
+}
+
+/* フォーカス可視化（アクセシビリティ） */
+.expandwp-resizer:focus {
+    opacity: 0.8 !important;
+    outline: 2px solid #005cee !important;
+    outline-offset: 2px !important;
+}
+
+/* 拡張時の視覚的フィードバック */
+.expandwp-expanded {
+    position: relative !important;
+}
+
+.expandwp-expanded::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 2px !important;
+    height: 100% !important;
+    background: rgba(0, 123, 255, 0.6) !important;
+    z-index: 1 !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+    pointer-events: none !important;
+}
+
+.expandwp-expanded:hover::before {
+    opacity: 1 !important;
+}
+
+/* RTL での左ボーダー調整 */
+.rtl .expandwp-expanded::before {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* パフォーマンス最適化 */
+.expandwp-expanded {
+    will-change: width !important;
+    transform: translateZ(0) !important;
+}
