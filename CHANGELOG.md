@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- キーボードショートカットを変更
+  - `Alt + ,`: 左パネル（List View）のトグル（旧: `Alt + [`）
+  - `Alt + .`: 右パネル（設定パネル）のトグル（旧: `Alt + ]`）
+  - `Alt + 0`: 両パネル幅リセット（変更なし）
+
 ### Added
 - プラグインアンインストール処理（uninstall.php）
   - 設定オプション（expandwp_options）の完全削除
