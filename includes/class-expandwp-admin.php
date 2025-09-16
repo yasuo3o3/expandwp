@@ -167,9 +167,9 @@ class Of_ExpandWP_Admin {
             <div class="expandwp-admin-notice" style="background: #fff; border-left: 4px solid #72aee6; margin: 20px 0; padding: 12px;">
                 <h3><?php echo esc_html__('キーボードショートカット', 'expandwp'); ?></h3>
                 <ul style="margin-left: 20px;">
-                    <li><strong>Alt + [</strong> : <?php echo esc_html__('左パネルのトグル', 'expandwp'); ?></li>
-                    <li><strong>Alt + ]</strong> : <?php echo esc_html__('右パネルのトグル', 'expandwp'); ?></li>
-                    <li><strong>Alt + 0</strong> : <?php echo esc_html__('幅のリセット', 'expandwp'); ?></li>
+                    <li><strong>Alt + ,</strong> : <?php echo esc_html__('左パネルのトグル', 'expandwp'); ?></li>
+                    <li><strong>Alt + .</strong> : <?php echo esc_html__('右パネルのトグル', 'expandwp'); ?></li>
+                    <li><strong>Alt + /</strong> : <?php echo esc_html__('幅のリセット', 'expandwp'); ?></li>
                 </ul>
                 <p><em><?php echo esc_html__('※入力中（input/textarea/contenteditable）のときは無効化されます。', 'expandwp'); ?></em></p>
             </div>

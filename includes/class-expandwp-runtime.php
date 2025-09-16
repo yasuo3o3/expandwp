@@ -39,9 +39,9 @@ class Of_ExpandWP_Runtime {
                 )
             ),
             'shortcuts' => array(
-                'leftToggle' => 'Alt+[',
-                'rightToggle' => 'Alt+]',
-                'reset' => 'Alt+0'
+                'leftToggle' => 'Alt+,',
+                'rightToggle' => 'Alt+.',
+                'reset' => 'Alt+/'
             )
         );
     }

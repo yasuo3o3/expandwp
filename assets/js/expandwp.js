@@ -189,13 +189,13 @@
             if (isInputActive) return;
 
             if (e.altKey && !e.ctrlKey && !e.shiftKey && !e.metaKey) {
-                if (e.code === 'BracketLeft') { // Alt + [
+                if (e.code === 'Comma') { // Alt + ,
                     e.preventDefault();
                     togglePanel('left');
-                } else if (e.code === 'BracketRight') { // Alt + ]
+                } else if (e.code === 'Period') { // Alt + .
                     e.preventDefault();
                     togglePanel('right');
-                } else if (e.code === 'Digit0') { // Alt + 0
+                } else if (e.code === 'Slash') { // Alt + /
                     e.preventDefault();
                     resetPanels();
                 }
